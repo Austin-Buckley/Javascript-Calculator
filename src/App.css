@@ -1,38 +1,188 @@
+@import "https://fonts.googleapis.com/css?family=Share+Tech+Mono";
+@font-face {
+  font-family: "Digital";
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7")
+      format("svg");
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: steelblue;
+}
+
+body {
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.calculator {
+  width: 320px;
+  font-family: digital;
+  transition: all 1s ease-in-out;
+  padding: 0.25rem;
+  background-color: #000000;
+  border-radius: 0.25rem;
+  border: 3px double #373a3f;
+}
+
+.formulaScreen {
+  border: 3px double #0f0f0f;
+  font-size: 2rem;
+  color: orange;
+  text-align: right;
+  vertical-align: text-top;
+  line-height: 1.5rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  background-color: #181818;
+  padding: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  margin-bottom: 0.15rem;
+}
+
+.outputScreen {
+  border: 3px double #0f0f0f;
+  background-color: #181818;
+  font-size: 3rem;
   color: white;
+  text-align: right;
+  line-height: 35px;
+  padding: 0.25rem;
+  margin-bottom: 0.35rem;
+  border-radius: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+.MuiGrid-item {
+  padding: 1px;
+  font-family: digital;
+  transition: all 0.1s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.MuiGrid-item:hover {
+  transform: scale(1.025);
 }
+
+.MuiGrid-item:active {
+  transform: scale(0.9);
+}
+
+.btn {
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  margin: 2rem;
+  font-size: 1rem;
+  border: "3px double #373a3f";
+}
+
+.btn:active {
+}
+
+.btn:hover {
+}
+
+.MuiGrid-container {
+  transition: all 0.3s ease-in-out;
+}
+
+/*
+<button
+            class="jumbo"
+            id="clear"
+            value="AC"
+            style={{ background: "rgb(172, 57, 57)" }}
+          >
+            AC
+          </button>
+          <button
+            id="divide"
+            value="/"
+            sstyle={{ background: "rgb(102, 102, 102)" }}
+          >
+            /
+          </button>
+          <button
+            id="multiply"
+            value="x"
+            style={{ background: "rgb(102, 102, 102)" }}
+          >
+            x
+          </button>
+          <button id="seven" value="7">
+            7
+          </button>
+          <button id="eight" value="8">
+            8
+          </button>
+          <button id="nine" value="9">
+            9
+          </button>
+          <button
+            id="subtract"
+            value="-"
+            style={{ background: "rgb(102, 102, 102)" }}
+          >
+            -
+          </button>
+          <button id="four" value="4">
+            4
+          </button>
+          <button id="five" value="5">
+            5
+          </button>
+          <button id="six" value="6">
+            6
+          </button>
+          <button
+            id="add"
+            value="+"
+            style={{ background: "rgb(102, 102, 102)" }}
+          >
+            +
+          </button>
+          <button id="one" value="1">
+            1
+          </button>
+          <button id="two" value="2">
+            2
+          </button>
+          <button id="three" value="3">
+            3
+          </button>
+          <button class="jumbo" id="zero" value="0">
+            0
+          </button>
+          <button id="decimal" value=".">
+            .
+          </button>
+          <button
+            id="equals"
+            value="="
+            style={{
+              background: "rgb(0, 68, 102)",
+              position: "absolute",
+              height: "130px",
+              bottom: "5px",
+            }}
+          >
+            =
+          </button>
+
+*/
